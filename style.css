@@ -1,0 +1,208 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, hsla(180, 12%, 30%, 0.11), hwb(170 7% 38%));
+    color: #000000;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для хедера и навигации */
+header {
+    background: rgba(52, 90, 87, 0.8);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: rgba(52, 71, 65, 0.1);
+}
+
+.navbar li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    color: #bebebe;
+}
+
+/* Главный блок страницы */
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Стили для футера */
+footer {
+    background: rgba(52, 90, 87, 0.8);
+    padding: 10px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки */
+button, a.button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover, a.button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+main ul {
+    list-style-type: none; /* Убираем точки */
+    padding: 0; /* Убираем отступы */
+    margin: 20px auto; /* Центрируем список */
+    max-width: 400px;
+    text-align: left;
+}
+
+main ul li {
+    margin: 10px 0; /* Отступ между элементами списка */
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для красоты */
+    border-radius: 5px; /* Закруглённые углы */
+    transition: all 0.3s ease;
+}
+
+main ul li:hover {
+    background: rgba(255, 255, 255, 0.3); /* Более светлый фон при наведении */
+}
+a {
+    color: #1da1f2; /* Голубой цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d8bf2; /* Более яркий цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Уменьшаем общий размер шрифта */
+        padding: 0 10px; /* Добавляем немного отступов */
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .navbar {
+        flex-direction: column; /* Меню отображается вертикально */
+        gap: 10px; /* Отступы между элементами меню */
+    }
+
+    .navbar li {
+        margin: 5px 0; /* Отступы между кнопками */
+    }
+
+    .navbar li a {
+        font-size: 18px; /* Увеличиваем текст для удобства */
+        padding: 10px 15px; /* Делаем кнопки больше */
+    }
+
+    main h1 {
+        font-size: 2rem; /* Уменьшаем заголовок */
+    }
+
+    main p {
+        font-size: 1rem; /* Уменьшаем текст */
+        line-height: 1.5;
+    }
+
+    form {
+        padding: 15px; /* Уменьшаем отступы в форме */
+    }
+
+    form input, form textarea {
+        font-size: 14px; /* Уменьшаем текст в полях формы */
+    }
+
+    form button {
+        font-size: 16px;
+        width: 100%; /* Кнопка растягивается на всю ширину */
+    }
+}
